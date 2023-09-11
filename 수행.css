@@ -1,0 +1,118 @@
+:root{
+    --body-bg: orange;
+    --hamberger-bg: red;
+}
+html, body{
+    height: 100%;
+}
+body{
+    background-color: var(--body-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: center;
+}
+.hamberger-title{
+    color: white;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+.hamberger-container{
+    display: inline-block;
+    position: relative;
+    width: 1900px;
+    height: 80px;
+    border-radius: 30px;
+    background: var(--hamberger-bg);
+}
+.hamberger,
+.hamberger::before,
+.hamberger::after{
+    position: absolute;
+    width: 50px;
+    height: 7px;
+    transition: 0.5s;
+    background: white;
+    margin-left: 95%;
+}
+.hamberger::before,
+.hamberger::after{
+    content: "";
+}
+.hamberger{
+    top:45%
+}
+.hamberger::before{
+    top:-20px;
+    left:-47px;
+}
+.hamberger::after{
+    top:20px;
+    left:-47px;
+}
+.toggle:checked ~ .hamberger::after{
+    top:0;
+    transform: rotate(225deg);
+}
+.toggle:checked ~ .hamberger::before{
+    top:0;
+    transform: rotate(135deg);
+}
+.toggle:checked ~ .hamberger{
+    background: var(--hamberger-bg);
+}
+.toggle{
+    opacity: 0;
+}
+.container{
+    width: 500px;
+    height: 700px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    margin-top: 50px;
+}
+.su0{
+    background-image: url(착시.jpg);
+    width: 500px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+}
+.su1{
+    background-image: url(박소연.jpg);
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    margin-top:180px;
+    
+}
+.su1:hover{
+    scale: 125%;
+}
+.su2{
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    position: relative;
+    text-align: center;
+}
+.su3{
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: yellow;
+    position: relative;   
+}
+.su3:active{
+    scale: 150%;
+}
+.su4{
+    height: 100px;
+    width:400px;
+    overflow:auto;
+    margin-top: 20px;
+}
